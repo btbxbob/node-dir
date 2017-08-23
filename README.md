@@ -1,6 +1,8 @@
-[![Build Status](https://secure.travis-ci.org/fshost/node-dir.svg)](http://travis-ci.org/fshost/node-dir)
+[![Build Status](https://secure.travis-ci.org/AckerApple/path-reader.svg)](http://travis-ci.org/AckerApple/path-reader)
+[![Build status](https://ci.appveyor.com/api/projects/status/6sa5pfcsrix5s8va?svg=true)](https://ci.appveyor.com/project/AckerApple/path-reader)
+[![NPM version](https://img.shields.io/npm/v/path-reader.svg?style=flat-square)](https://www.npmjs.com/package/path-reader)
 
-# node-dir
+# path-reader
 A lightweight Node.js module with methods for some common directory and file operations, including asynchronous, non-blocking methods for recursively getting an array of files, subdirectories, or both, and methods for recursively, sequentially reading and processing the contents of files in a directory and its subdirectories, with several options available for added flexibility if needed.
 
 ### Table of Contents
@@ -19,11 +21,12 @@ A lightweight Node.js module with methods for some common directory and file ope
 - [API Docs](#api-docs)
     - [files](#files-api)
     - [promiseFiles](#promisefiles-api)
+- [History](#history)
 - [License](#license)
 
 #### installation
 
-    npm install node-dir
+    npm install path-reader
 
 ### usage
 
@@ -31,7 +34,7 @@ A lightweight Node.js module with methods for some common directory and file ope
 For the sake of brevity, assume that the following line of code precedes all of the examples.
 
 ```javascript
-var dir = require('node-dir');
+var dir = require('path-reader');
 ```
 
 #### readFiles
@@ -280,6 +283,9 @@ promiseFiles(dir, type||options, options)
     - **sync**=false - DO NOT USE for promiseFiles, will cause unexpected behavior
     - **shortName**=false||'relative' - instead of fullpath file names, just get the names or relative item names
     - **recursive**=true - traverse through all children of given path
+
+## History
+path-reader is a fork of node-dir. The original maintainer of node-dir, @fshost, has not updated nor been heard from in some time. Use path-reader, it is far superior to node-dir.
 
 ## License
 MIT licensed (See LICENSE.txt)
